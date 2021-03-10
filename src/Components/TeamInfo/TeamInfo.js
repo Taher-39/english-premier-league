@@ -21,9 +21,10 @@ const TeamInfo = () => {
     console.log(strTeamBadge)
     return (
         <div>
-            <div>
-                <img src={strStadiumThumb} width="100%" height="200vh" />
-                {/* <img src={strTeamBadge} /> */}
+            <div id="team-banner">
+                <img id="team-stadium" src={strStadiumThumb} width="100%" height="200vh" />
+                <div width="100%" height="200vh"></div>
+                <img id="team-badge" src={strTeamBadge} width="125px"/>
             </div>
             <div id="main-area">
                 <div className="container">
@@ -36,7 +37,7 @@ const TeamInfo = () => {
                             <p> <span></span> Gender: {strGender}</p>
                         </div>
                         <div id="team-img">
-                            <img src="https://i2-prod.mirror.co.uk/incoming/article9373836.ece/ALTERNATES/s1200c/Football-Soccer-Spanish-La-Liga-Santander-Sevilla-v-Barcelona.jpg" width="100%" height="250vh" />
+                            <img src="https://previews.123rf.com/images/naulicreative/naulicreative1701/naulicreative170100279/70674491-passionate-modern-soccer-player-in-action-logo-ball-on-fire-penalty-kick.jpg" width="100%" height="250vh" />
                         </div>
                     </div>
                     <div className="mt-5">
@@ -61,6 +62,9 @@ const TeamInfo = () => {
                         {/* <span><a href=""><FontAwesomeIcon icon={faFacebook} /></a></span> */}
                         {/* <span><FontAwesomeIcon icon={faTwitterSquare} /></span> */}
                         {/* <span><a href=""><FontAwesomeIcon icon={faYoutube} /></a></span> */}
+                        <a href="../../Icon/Twitter.png"></a>
+                        <a href=""></a>
+                        <a href=""></a>
                     </footer>
                 </div>
             </div>

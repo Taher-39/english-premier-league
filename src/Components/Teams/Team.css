@@ -1,0 +1,12 @@
+.team-style{
+    /* border: 2px solid lightblue; */
+    margin: 30px;
+    padding: 25px;
+    border-radius: 10px;
+    text-align: center;
+    width: 220px;
+    height: 250px;
+    background-color: blueviolet;
+    color: #fff;
+    box-shadow: 5px 5px 5px gray;
+}

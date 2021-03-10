@@ -1,10 +1,13 @@
 #main-area{
-    background-color: #0E0A2B;
+    background: #283c86;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #45a247, #283c86);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #45a247, #283c86); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
     color: azure;
 }
 .team-info{
     min-height: 284px;
-    background-color: #3A42FF;
+    background-color: #555;
     color: azure;
     border-radius: 5px;
 }
@@ -30,3 +33,12 @@
         float: none;
     }
 }
+#team-banner{
+    position: relative;
+}
+#team-banner #team-badge{
+    position: absolute;
+    top: 20%;
+    left: 45%;
+}
+
