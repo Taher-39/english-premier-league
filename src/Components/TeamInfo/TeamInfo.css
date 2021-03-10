@@ -1,0 +1,32 @@
+#main-area{
+    background-color: #0E0A2B;
+    color: azure;
+}
+.team-info{
+    min-height: 284px;
+    background-color: #3A42FF;
+    color: azure;
+    border-radius: 5px;
+}
+#team-details{
+    float: left;
+    width: 60%;
+    padding: 30px;
+    box-sizing: border-box;
+}
+#team-img{
+    float: right;
+    width: 40%;
+    padding: 15px;
+    box-sizing: border-box;
+}
+@media(max-width: 600px){
+    #team-details{
+        width: 100%;
+        float: none;
+    }
+    #team-img{
+        width: 100%;
+        float: none;
+    }
+}
