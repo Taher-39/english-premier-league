@@ -9,10 +9,8 @@ const Home = () => {
         .then(res => res.json())
         .then(data => {
             setTeams(data.teams)
-            // console.log(data.teams)
         })
     }, [])
-    // console.log(teams[0].strTeam)
     return (
         <div>
             <div id="banner-area">
@@ -23,7 +21,7 @@ const Home = () => {
                 <div className="container">
                     <div className="row">
                         {
-                                teams.map(team => <Teams team = {team}></Teams>)
+                            teams.map(team => <Teams team={team} key={team.idTeam}></Teams>)
                         }
                     </div> 
                 </div>
