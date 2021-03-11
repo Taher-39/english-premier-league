@@ -9,6 +9,14 @@
 #banner-area h1{
     position: absolute;
     top: 40%;
-    left: 40%;
+    left: 35%;
     color: #fff
+}
+@media(max-width: 600px){
+    #banner-area h1{
+        position: absolute;
+        top: 30%;
+        left: 27%;
+        color: #fff
+   }
 }

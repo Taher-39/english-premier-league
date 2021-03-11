@@ -1,11 +1,32 @@
 /* banner area style */
-#team-banner{
+.team-banner{
     position: relative;
+    background: #000;
+    width: 100%;
+    height: 250px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
-#team-banner #team-badge{
+.color-overlay{
+    width: 100%;
+    height: 100%;
+    background: gray;
+    opacity: 0.6;
+    position: absolute;
+}
+.logo-overly{
     position: absolute;
     top: 20%;
     left: 45%;
+    z-index: 1;
+}
+@media(max-width: 600px){
+    .logo-overly{
+        position: absolute;
+        top: 30%;
+        left: 30%;
+   }
 }
 
 /* main area style */
@@ -20,10 +41,9 @@
 
 .team-info{
     min-height: 284px;
-    background-color: #555;
+    background-color: blueviolet;
     color: azure;
     border-radius: 5px;
-    /* margin-top: 50px; */
 }
 #team-details{
     float: left;
@@ -53,7 +73,6 @@
 
 /* footer section style */
 footer{
-    /* background-color: black; */
     padding: 30px 0 50px 0;
 }
 footer h3{
@@ -77,4 +96,10 @@ footer img{
 }
 footer img:hover{
     background-color: lightgoldenrodyellow;
+}
+@media(max-width: 600px){
+    footer ul li{
+        display: block;
+        margin: 10px 0;
+    }
 }

@@ -10,10 +10,14 @@ import football from "../../Icon/football.png";
 import gender from "../../Icon/gender-sign.png";
 import femaleImg from '../../Photo/female2.png';
 
+
 const TeamInfo = () => {
     const { idTeam } = useParams();
     const [teamInfo, SetTeamInfo] = useState([])
-    const { intFormedYear, strGender, strCountry, strTeam, strSport, strTeamBadge, strStadiumThumb, strFacebook, strTwitter, strYoutube, strTeamFanart4 } = teamInfo;
+    const { intFormedYear, strGender, strCountry, strTeam, 
+            strSport, strTeamBadge, strStadiumThumb, strFacebook, 
+        strTwitter, strYoutube, strTeamFanart4, strDescriptionEN,
+        strDescriptionFR } = teamInfo;
     
     useEffect(() => {
         const url = `https://www.thesportsdb.com/api/v1/json/1/lookupteam.php?id=${idTeam}`
@@ -23,16 +27,16 @@ const TeamInfo = () => {
                 SetTeamInfo(data.teams[0])
             })
     }, [idTeam])    
+    console.log(teamInfo)
     return (
         <div>
-            <header id="team-banner">
-                <img id="team-stadium" src={strStadiumThumb} width="100%" height="250vh" />
-                {/* <div width="100%" height="200vh"></div> */}
-                <img id="team-badge" src={strTeamBadge} width="150px"/>
+            <header className="team-banner">
+                <img className="team-stadium" src={strStadiumThumb} width="100%" height="250vh" />
+                <img className="logo-overly" src={strTeamBadge} width="100px" />
+                <div className="color-overlay"></div>
             </header>
-
             <section id="main-area">
-                <div className="container" id="team">
+                <div className="container" >
                     <div className="team-info">
                         <div id="team-details">
                             <h4>{strTeam}</h4>
@@ -49,29 +53,30 @@ const TeamInfo = () => {
                         </div>
                     </div>
                     <div className="description">
-                        <p>Football is played in accordance with a set of rules known as the Laws of the Game.
-                        The ball is 68–70 cm (27–28 in) in circumference and known as the football.
-                        The two teams each compete to get the ball into the other team's goal
-                        (between the posts and under the bar), thereby scoring a goal.
-                        Players are not allowed to touch the ball with hands or arms while it is in play,
-                        except for the goalkeepers within the penalty area.
-                        </p>
-
-                        <p>Other players mainly use their feet to strike or pass the ball, but may also use any other
-                        part of their body except the hands and the arms. The team that
-                        has scored more goals at the end of the game is the winner;
-                        if both teams have scored an equal number of goals either a draw is declared or the
-                        game goes into extra time or a penalty shootout depending on the format of the competition.
-                        ptain who has only one official responsibility as mandated by the Laws of the Game:
-                        to represent their team in the coin toss prior to kick-off or penalty kicks.
-                        </p>
+                        <h2 className="text-center pb-3">Club Description</h2>
+                        <p>{strDescriptionEN}</p>
+                        
+                        {
+                            strDescriptionFR ? <p>{strDescriptionFR}</p>
+                            : <p>
+                                    Football is a family of team sports that involve, to varying degrees, 
+                                    kicking a ball to score a goal. Unqualified, the word football normally 
+                                    means the form of football that is the most popular where the word is used.
+                                    Sports commonly called football include association football 
+                                    (known as soccer in some countries); gridiron football (specifically American football or Canadian football);
+                                    Australian rules football; rugby football (either rugby union or rugby league); and Gaelic football.
+                                    These various forms of football 
+                                    share to varying extent common origins and are known as football codes
+                              </p>
+                        }
+                        
                     </div>
                     <footer>
                         <h3>Stay With</h3>
                         <ul>
-                            <li><a href={`${strFacebook}`} target="blank" ><img src={fb} /></a></li>
-                            <li><a href={strTwitter} target="blank" ><img src={tw} /></a></li>
-                            <li><a href={strYoutube} target="blank" ><img src={yt} /></a></li>
+                            <li><a href={`https://${strFacebook}`} target="blank" ><img src={fb} /></a></li>
+                            <li><a href={`https://${strTwitter}`} target="blank" ><img src={tw} /></a></li>
+                            <li><a href={`https://${strYoutube}`} target="blank" ><img src={yt} /></a></li>
                         </ul>
                     </footer>
                 </div>

@@ -10,11 +10,12 @@ const Teams = (props) => {
     const exploreInfo = (idTeam) => {
         history.push(`team/${idTeam}`)
     }
-    // console.log(strTeamBadge)
     return (
-        <div className="col-md-4 col-sm-5 col-xm-6">
-            <div className="team-style">
-                <img src={strTeamBadge} width="80px" alt="" />
+        <div  className="col-md-4 col-sm-5">
+            <div className="team-style card">
+                <div className='logo'>
+                    <img src={strTeamBadge} width="80px" alt="" />
+                </div>
                 <h3>{strTeam}</h3>
                 <p>Sports type: {strSport}</p>
                 <button className="btn btn-danger" onClick={() => exploreInfo(idTeam)}>

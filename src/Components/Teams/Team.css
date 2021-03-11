@@ -1,6 +1,5 @@
 .team-style{
-    /* border: 2px solid lightblue; */
-    margin: 30px;
+    margin: 40px;
     padding: 25px;
     border-radius: 10px;
     text-align: center;
@@ -9,4 +8,10 @@
     background-color: blueviolet;
     color: #fff;
     box-shadow: 5px 5px 5px gray;
+}
+
+@media(max-width: 600px){
+    .card{
+        margin-left: 22px;
+    }
 }
