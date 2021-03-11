@@ -27,7 +27,6 @@ const TeamInfo = () => {
                 SetTeamInfo(data.teams[0])
             })
     }, [idTeam])    
-    console.log(teamInfo)
     return (
         <div>
             <header className="team-banner">
