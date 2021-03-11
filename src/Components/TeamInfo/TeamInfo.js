@@ -27,8 +27,8 @@ const TeamInfo = () => {
         <div>
             <header id="team-banner">
                 <img id="team-stadium" src={strStadiumThumb} width="100%" height="250vh" />
-                <div width="100%" height="200vh"></div>
-                <img id="team-badge" src={strTeamBadge} width="125px"/>
+                {/* <div width="100%" height="200vh"></div> */}
+                <img id="team-badge" src={strTeamBadge} width="150px"/>
             </header>
 
             <section id="main-area">
@@ -69,7 +69,7 @@ const TeamInfo = () => {
                     <footer>
                         <h3>Stay With</h3>
                         <ul>
-                            <li><a href={strFacebook} target="blank" ><img src={fb} /></a></li>
+                            <li><a href={`${strFacebook}`} target="blank" ><img src={fb} /></a></li>
                             <li><a href={strTwitter} target="blank" ><img src={tw} /></a></li>
                             <li><a href={strYoutube} target="blank" ><img src={yt} /></a></li>
                         </ul>

@@ -15,7 +15,7 @@ const Home = () => {
         <div>
             <div id="banner-area">
                 <img src="https://www.bison.co.uk/wp-content/uploads/2018/08/Wembely.jpg" width="100%" height="200vh" />
-                <h1>Team Material</h1>
+                <h1>Team Materials</h1>
             </div>
             <div id="teams-area">
                 <div className="container">
